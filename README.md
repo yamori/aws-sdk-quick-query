@@ -11,4 +11,4 @@ The AWS SDK is pretty low-level, here are some helpers to get access to info qui
 
 I would recommend cloning this repo, then making some aliases (in ~/.bashrc) for easy access.
 
-`alias aws_list_instances='ruby /vagrant/aws_convenience/aws_list_instances.rb'`
+`alias aws_list_instances='ruby /whatever_path/aws_list_instances.rb'`
