@@ -4,7 +4,7 @@ Requirements
 
 - Ruby (highly recommend [rvm](https://rvm.io/))
   - gems: aws-sdk
-- AWS SDK (configured for your account)
+- AWS CLI (configured for your account)
 
 The AWS SDK is pretty low-level, here are some helpers to get access to info quicker and not resort to going through the web console.
 
