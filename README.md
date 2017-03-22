@@ -7,9 +7,6 @@ Sample output:
 ```vagrant@precise64:/vagrant$ aws_list_instances
 ...Querying AWS us-east-1
 ====================
-vagrant@precise64:/vagrant$ aws_list_instances
-...Querying AWS us-east-1
-====================
 Jenkins_rhel   status:running   t2.medium     id:i-123456789   vpc:vpc-123
   Pub IP: 123.123.456.789
   Prv IP: 10.0.0.123
