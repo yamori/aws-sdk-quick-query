@@ -10,14 +10,13 @@ def display_addresses(ec2Client, instance_id)
     ]
   })
   if describe_addresses_result.addresses.count == 0
-    puts "  No addresses currently associated with the instance."
+    puts "  No public addresses currently associated with the instance."
   else
     describe_addresses_result.addresses.each do |address|
       # puts "  Allocation ID: #{address.allocation_id}"
       # puts "  Association ID: #{address.association_id}"
       # puts "  Instance ID: #{address.instance_id}"
       puts "  Pub IP: #{address.public_ip}"
-      puts "  Prv IP: #{address.private_ip_address}"
     end
   end
 end
@@ -67,6 +66,7 @@ ec2.instances.each do |inst|
 	end
 	# How do we get an instance's OS?  instance_type doesn't work...
 	puts "#{name}   status:#{inst.state.name}   #{inst.instance_type}  #{inst.platform}   id:#{inst.id}   vpc:#{inst.vpc_id}"
+	puts "  Prv IP: #{inst.private_ip_address}"
 	
 	display_addresses(ec2Client, inst.id)
 	display_inbound_ports(inst.security_groups)
