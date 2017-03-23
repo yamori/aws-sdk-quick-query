@@ -55,8 +55,9 @@ puts "...Querying AWS #{region}"
 puts "="*20
       
 # Iterate over all EC2 instances.  (Don't use if you have a lot)
+nonDesiredStates = ["stopped","terminated"]
 ec2.instances.each do |inst|
-  if (inst.state.name!="stopped")
+  if ( !nonDesiredStates.include?(inst.state.name) )
     name = "(no tag name)"
 	inst.tags.each do |tag|
 	  if (tag.key=="Name")
