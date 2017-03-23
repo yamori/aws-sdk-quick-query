@@ -27,7 +27,7 @@ Selenium_hub_win   status:running   t2.micro     id:i-123456780   vpc:vpc-123
 
 ## Scripts
 
-1. aws_list_instances - Lists all EC2 instances that are not 'stopped'
+1. aws_list_instances - Lists all EC2 instances that are not 'stopped' or 'terminated'
 
 ## Install
 
