@@ -1,0 +1,7 @@
+
+# For Dry Run
+--dry-run
+
+
+# Terminate
+aws ec2 terminate-instances --instance-ids i-025d37a4504720898
