@@ -3,5 +3,8 @@
 --dry-run
 
 
+# Stop
+aws ec2 stop-instances --instance-ids i-025xxxxxxxxxx
+
 # Terminate
-aws ec2 terminate-instances --instance-ids i-025d37a4504720898
+aws ec2 terminate-instances --instance-ids i-025d3xxxxxxxxxxxxx
