@@ -2,9 +2,18 @@
 # For Dry Run
 --dry-run
 
+# EC2
 
-# Stop
+## Stop
 aws ec2 stop-instances --instance-ids i-025xxxxxxxxxx
 
-# Terminate
+## Terminate
 aws ec2 terminate-instances --instance-ids i-025d3xxxxxxxxxxxxx
+
+
+# EBS
+aws ec2 describe-volumes 
+aws ec2 describe-volumes --volume-ids vol-093a0axxxxxxx
+
+## Delete on Termination
+aws ec2 modify-instance-attribute --instance-id i-05a8cc95e6527bd1c --block-device-mappings "[{\"DeviceName\": \"/dev/xvda\",\"Ebs\":{\"DeleteOnTermination\":false}}]"
